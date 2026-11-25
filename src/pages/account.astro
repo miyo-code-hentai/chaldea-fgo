@@ -1,0 +1,10 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import ProfileApp from '@/components/ProfileApp.svelte'
+
+export const prerender = true
+---
+
+<Layout title="Personnel Profile | Chaldea" description="Your Chaldea observer profile.">
+  <ProfileApp client:only="svelte" />
+</Layout>

@@ -1,0 +1,2 @@
+Potret karakter (staf + servant). Rasio 3:4 (mis. 800x1067), format .webp
+Nama file = slug. Daftar lengkap ada di ASSETS_GUIDE.md

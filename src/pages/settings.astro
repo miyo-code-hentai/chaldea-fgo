@@ -1,0 +1,10 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import SettingsApp from '@/components/SettingsApp.svelte'
+
+export const prerender = true
+---
+
+<Layout title="Display Settings | Chaldea" description="Choose the theme, navbar position, intro and music for Chaldea.">
+  <SettingsApp client:only="svelte" />
+</Layout>

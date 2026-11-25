@@ -1,0 +1,196 @@
+/* Display settings page (/settings). Uses the site tokens so it follows light and dark. */
+.set-page {
+  min-height: 100dvh;
+  background: var(--page);
+  color: var(--text);
+}
+.set-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 18px 5vw;
+  border-bottom: 1px solid var(--border);
+}
+.set-back {
+  color: var(--accent);
+  font: 500 12px 'IBM Plex Mono', monospace;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.set-eyebrow {
+  color: var(--muted);
+  font: 500 11px 'IBM Plex Mono', monospace;
+  letter-spacing: 0.16em;
+}
+.set-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 16px 80px;
+  display: grid;
+  gap: 18px;
+}
+.set-main h1 {
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.1;
+}
+.set-lead,
+.set-muted {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+.set-card {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.set-card h2 {
+  font-size: 20px;
+}
+.set-seg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.set-seg button,
+.set-models .set-model {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--text);
+  font: 500 12px 'IBM Plex Mono', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.set-seg button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+}
+.set-seg button.is-on,
+.set-models .set-model.is-on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.set-seg button.is-on .set-mini i {
+  background: #fff;
+}
+.set-models {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.set-models .set-model {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0;
+  font: inherit;
+  font-size: 14px;
+}
+.set-models .set-model strong {
+  font-size: 16px;
+}
+.set-models .set-model.is-on .set-muted {
+  color: #e6f4fa;
+}
+.set-model-preview {
+  display: flex;
+  gap: 4px;
+  height: 46px;
+  padding: 6px;
+  border: 1px solid currentColor;
+  opacity: 0.8;
+}
+.set-model-alt .set-model-preview {
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+}
+.set-model-preview i {
+  flex: 1;
+  background: currentColor;
+  opacity: 0.35;
+}
+.set-model-alt .set-model-preview i {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.set-mini {
+  position: relative;
+  width: 18px;
+  height: 14px;
+  border: 1px solid currentColor;
+  opacity: 0.85;
+}
+.set-mini i {
+  position: absolute;
+  background: var(--accent);
+}
+.set-mini-top i { top: 0; left: 0; right: 0; height: 4px; }
+.set-mini-bottom i { bottom: 0; left: 0; right: 0; height: 4px; }
+.set-mini-left i { top: 0; bottom: 0; left: 0; width: 4px; }
+.set-mini-right i { top: 0; bottom: 0; right: 0; width: 4px; }
+.set-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.set-row label {
+  display: grid;
+  gap: 2px;
+}
+.set-switch {
+  position: relative;
+  width: 56px;
+  height: 30px;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  border-radius: 999px;
+  cursor: pointer;
+  flex: none;
+}
+.set-switch span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--muted);
+  transition: transform 0.2s ease;
+}
+.set-switch.is-on {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.set-switch.is-on span {
+  transform: translateX(26px);
+  background: #fff;
+}
+.set-range {
+  width: min(320px, 100%);
+  accent-color: var(--accent);
+}
+.set-range:disabled {
+  opacity: 0.5;
+}
+.set-page button:focus-visible,
+.set-page input:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}

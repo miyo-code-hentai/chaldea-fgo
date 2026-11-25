@@ -1,0 +1,49 @@
+---
+import Emblem from '@/components/Emblem.svelte'
+import ProfileCard from '@/components/ProfileCard.svelte'
+import ThemeToggle from '@/components/ThemeToggle.svelte'
+import Layout from '@/layouts/Layout.astro'
+import { listFavorites } from '@/lib/server/servants'
+import { getPublicUser } from '@/lib/server/users'
+
+export const prerender = false
+
+const id = Number(Astro.params.id)
+const user = Number.isInteger(id) && id > 0 ? getPublicUser(id) : null
+if (!user) {
+  Astro.response.status = 404
+}
+const favorites = user ? listFavorites(user.id) : []
+---
+
+<Layout
+  title={user ? `${user.name} | Chaldea` : 'Not found | Chaldea'}
+  description={user ? `${user.name}'s Chaldea personnel card.` : 'This personnel record does not exist.'}
+>
+  <main class="pub">
+    <header class="pub-top">
+      <a class="identity" href="/#/home" aria-label="Chaldea home">
+        <Emblem size={34} />
+        <span class="chaldea-wordmark"><b>CHALDEA</b><small>PERSONNEL</small></span>
+      </a>
+      <nav>
+        <a class="text-link" href="/#/forum">Forum ↗</a>
+        <a class="text-link" href="/account">My profile ↗</a>
+        <ThemeToggle client:load />
+      </nav>
+    </header>
+    <section class="pub-body">
+      {
+        user ? (
+          <ProfileCard user={user} favorites={favorites} />
+        ) : (
+          <div class="pub-missing">
+            <h1>No such personnel record.</h1>
+            <p>This account does not exist, or it was removed.</p>
+            <a class="text-link" href="/#/forum">Back to the forum ↗</a>
+          </div>
+        )
+      }
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,129 @@
+/**
+ * Server-side auth helpers. Replaces the original Next.js `lib/app-auth.ts`, which used Payload's
+ * Local API. Astro can't host Payload, so we call the Payload REST API of a running Payload server
+ * (set PAYLOAD_URL). The JWT lives in the same httpOnly `app-session` cookie as before.
+ */
+import type { AstroCookies } from 'astro'
+
+export const APP_SESSION_COOKIE = 'app-session'
+
+export type ObservationRegion =
+  | 'antarctica'
+  | 'asia-pacific'
+  | 'europe'
+  | 'north-america'
+  | 'south-america'
+  | 'other'
+
+export type AppUser = {
+  id: number | string
+  collection: 'users'
+  email: string
+  name: string
+  callSign?: string | null
+  region?: string | null
+  createdAt?: string
+}
+
+export type AuthActionState = {
+  ok: boolean
+  message: string
+  fieldErrors?: Partial<Record<'callSign' | 'email' | 'name' | 'password' | 'region', string>>
+}
+
+const allowedRegions = new Set<string>([
+  'antarctica',
+  'asia-pacific',
+  'europe',
+  'north-america',
+  'south-america',
+  'other',
+])
+
+const payloadUrl = () =>
+  (process.env.PAYLOAD_URL ?? import.meta.env.PAYLOAD_URL ?? 'http://localhost:3000').replace(/\/$/, '')
+
+function text(formData: FormData, field: string) {
+  const value = formData.get(field)
+  return typeof value === 'string' ? value.trim() : ''
+}
+
+export function validateCredentials(formData: FormData) {
+  const email = text(formData, 'email').toLowerCase()
+  const password = text(formData, 'password')
+  const fieldErrors: NonNullable<AuthActionState['fieldErrors']> = {}
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 180) {
+    fieldErrors.email = 'Enter a valid email address.'
+  }
+  if (password.length < 8 || password.length > 128) {
+    fieldErrors.password = 'Password must be between 8 and 128 characters.'
+  }
+  return { email, password, fieldErrors }
+}
+
+export function validateSignup(formData: FormData) {
+  const { email, password, fieldErrors } = validateCredentials(formData)
+  const name = text(formData, 'name')
+  const callSign = text(formData, 'callSign')
+  const region = text(formData, 'region')
+
+  if (name.length < 2 || name.length > 80) fieldErrors.name = 'Name must be between 2 and 80 characters.'
+  if (callSign.length > 40) fieldErrors.callSign = 'Call sign cannot exceed 40 characters.'
+  if (!allowedRegions.has(region)) fieldErrors.region = 'Choose a valid observation zone.'
+
+  return { email, password, name, callSign, region: region as ObservationRegion, fieldErrors }
+}
+
+function setSession(cookies: AstroCookies, token: string, exp?: number) {
+  cookies.set(APP_SESSION_COOKIE, token, {
+    expires: exp ? new Date(exp * 1000) : undefined,
+    httpOnly: true,
+    path: '/',
+    sameSite: 'lax',
+    secure: import.meta.env.PROD,
+  })
+}
+
+export async function login(cookies: AstroCookies, email: string, password: string): Promise<AppUser> {
+  const res = await fetch(`${payloadUrl()}/api/users/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password }),
+  })
+  if (!res.ok) throw new Error('Login failed')
+  const result = (await res.json()) as { token?: string; exp?: number; user?: Omit<AppUser, 'collection'> }
+  if (!result.token || !result.user) throw new Error('Unable to establish an app session.')
+  setSession(cookies, result.token, result.exp)
+  return { ...result.user, collection: 'users' }
+}
+
+export async function signUp(
+  cookies: AstroCookies,
+  data: { email: string; password: string; name: string; callSign?: string; region: ObservationRegion },
+) {
+  const res = await fetch(`${payloadUrl()}/api/users`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  })
+  if (!res.ok) throw new Error('Signup failed')
+  return login(cookies, data.email, data.password)
+}
+
+export function logout(cookies: AstroCookies) {
+  cookies.delete(APP_SESSION_COOKIE, { path: '/' })
+}
+
+export async function getCurrentUser(cookies: AstroCookies): Promise<AppUser | null> {
+  const token = cookies.get(APP_SESSION_COOKIE)?.value
+  if (!token) return null
+  try {
+    const res = await fetch(`${payloadUrl()}/api/users/me`, { headers: { Authorization: `JWT ${token}` } })
+    if (!res.ok) return null
+    const { user } = (await res.json()) as { user?: Omit<AppUser, 'collection'> | null }
+    return user ? { ...user, collection: 'users' } : null
+  } catch {
+    return null
+  }
+}

@@ -1,0 +1,125 @@
+/* About page: responsive layout. Breakpoints: ≤1100 (small laptops / tablets landscape),
+   ≤900 (tablets), ≤640 (phones), ≤400 (small phones). Desktop is unchanged. */
+
+.about-page {
+  overflow-x: hidden;
+}
+.about-page img,
+.about-page figure {
+  max-width: 100%;
+}
+
+@media (max-width: 1100px) {
+  /* Staff: the featured card no longer needs to sit beside the roster. */
+  .about-page .ab-staff {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .about-page .ab-featured {
+    position: static;
+  }
+  .about-page .ab-hq {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .about-page .ab-roster {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .about-page .ab-tabs {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .about-page .about-actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-page .about-hero {
+    min-height: auto;
+    padding: 96px 20px 56px;
+  }
+  .about-page .about-hero h1 {
+    font-size: clamp(40px, 13vw, 56px);
+    line-height: 1.04;
+  }
+  .about-page .about-hero-visual,
+  .about-page .about-hero-visual img {
+    min-height: 220px;
+  }
+  .about-page .about-actions {
+    align-items: stretch;
+    gap: 12px;
+  }
+  .about-page .about-actions a {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-page .ab-sec,
+  .about-page .ab-servants {
+    padding: 48px 20px;
+  }
+  .about-page .ed-head {
+    margin-bottom: 24px;
+    gap: 14px;
+  }
+  .about-page .ed-head h2 {
+    font-size: clamp(28px, 9vw, 40px);
+  }
+  .about-page .ed-note {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about-page .ab-hq {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .about-page .ab-roster {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .about-page .ab-classes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .about-page .ab-class-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 6px;
+  }
+  .about-page .ab-class-tabs button {
+    flex: none;
+    scroll-snap-align: start;
+  }
+  .about-page .ab-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-page .ab-timeline li {
+    padding-left: 0;
+  }
+
+  .about-page .ab-chaldeas-copy {
+    padding: 48px 20px;
+  }
+  .about-page .achievement-section,
+  .about-page .about-enlist {
+    padding: 48px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-page .ab-facts {
+    grid-template-columns: 1fr;
+  }
+  .about-page .ab-roster {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-page .ab-featured {
+    padding: 12px;
+  }
+}

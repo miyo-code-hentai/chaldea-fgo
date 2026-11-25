@@ -1,0 +1,22 @@
+---
+import AuthForm from '@/components/AuthForm.svelte'
+import AuthShell from '@/components/AuthShell.astro'
+import Layout from '@/layouts/Layout.astro'
+
+export const prerender = true
+---
+
+<Layout title="Personnel Registration | Chaldea" description="Create a Chaldea observation archive account.">
+  <AuthShell
+    eyebrow="PERSONNEL INTAKE / NEW OBSERVER"
+    title="Join the final line of observation."
+    copy="Open a dedicated observation profile for the public archive. Registration creates your observer profile for the public archive."
+  >
+    <p class="auth-eyebrow">NEW PERSONNEL RECORD</p>
+    <h2 class="auth-card-title">Create account</h2>
+    <AuthForm client:load mode="signup" />
+    <p class="auth-alt">
+      Already registered? <a href="/login">Sign in ↗</a>
+    </p>
+  </AuthShell>
+</Layout>

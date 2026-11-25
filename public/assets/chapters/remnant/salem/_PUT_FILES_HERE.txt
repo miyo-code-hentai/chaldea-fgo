@@ -1,0 +1,2 @@
+banner.webp  (16:9, 1920x1080)  latar panel Salem
+map.webp     (4:3, 1600x1200)   peta Salem

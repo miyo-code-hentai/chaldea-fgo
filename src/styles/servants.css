@@ -1,0 +1,15 @@
+/* Servants page: the scroll-driven class gallery sits outside the normal page gutter. */
+.sv-page .sv-stage {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sv-page .sv-panel :where(.img-slot) {
+  position: absolute;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sv-page .sv-panel :global(.sv-art),
+  .sv-page .sv-info {
+    transition: none;
+  }
+}

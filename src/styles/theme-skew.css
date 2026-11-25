@@ -1,0 +1,34 @@
+/* =====================================================================================
+   Light / dark switch: a slanted parallelogram sweeps across the page (in), and the old
+   theme slides out the other way (out). Uses the View Transitions API that ThemeToggle and
+   the Settings page already call; reduced motion turns it off (see chaldea.css).
+   ===================================================================================== */
+
+/* New theme: a parallelogram grows from the left edge and covers the page. */
+::view-transition-new(root) {
+  animation: theme-skew-in 0.95s cubic-bezier(0.65, 0, 0.35, 1) both;
+  z-index: 2;
+}
+/* Old theme: its parallelogram collapses toward the right edge as the new one arrives. */
+::view-transition-old(root) {
+  animation: theme-skew-out 0.95s cubic-bezier(0.65, 0, 0.35, 1) both;
+  z-index: 1;
+}
+
+@keyframes theme-skew-in {
+  from {
+    clip-path: polygon(-40% 0, -40% 0, -60% 100%, -60% 100%);
+  }
+  to {
+    clip-path: polygon(-40% 0, 140% 0, 120% 100%, -60% 100%);
+  }
+}
+
+@keyframes theme-skew-out {
+  from {
+    clip-path: polygon(-40% 0, 140% 0, 120% 100%, -60% 100%);
+  }
+  to {
+    clip-path: polygon(140% 0, 140% 0, 120% 100%, 120% 100%);
+  }
+}

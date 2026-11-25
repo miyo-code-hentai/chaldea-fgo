@@ -1,0 +1,39 @@
+---
+import Emblem from './Emblem.svelte'
+import ThemeToggle from './ThemeToggle.svelte'
+
+interface Props {
+  eyebrow: string
+  title: string
+  copy: string
+}
+const { eyebrow, title, copy } = Astro.props
+---
+
+<main class="auth-page">
+  <div class="auth-grid" aria-hidden="true"></div>
+  <header class="auth-top">
+    <a class="identity" href="/#/home" aria-label="Chaldea home">
+      <Emblem size={38} />
+      <span class="chaldea-wordmark">
+        <b>CHALDEA</b>
+        <small>SECURITY ORGANIZATION</small>
+      </span>
+    </a>
+    <div class="auth-top-right">
+      <a class="text-link" href="/#/observatory">Organization file ↗</a>
+      <ThemeToggle client:load />
+    </div>
+  </header>
+  <div class="auth-body">
+    <section class="auth-intro">
+      <p class="auth-eyebrow">{eyebrow}</p>
+      <h1>{title}</h1>
+      <p class="auth-copy">{copy}</p>
+      <div class="auth-status"><span>ENCRYPTION / ACTIVE</span><span>HUMAN ORDER / STABLE</span></div>
+    </section>
+    <section class="auth-card">
+      <slot />
+    </section>
+  </div>
+</main>

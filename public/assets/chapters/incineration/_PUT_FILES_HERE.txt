@@ -1,0 +1,2 @@
+cover.webp -> kartu chapter (rasio 3:4, mis. 900x1200)
+Sub-folder per record berisi banner.webp (16:9, 1920x1080) dan map.webp (4:3, 1600x1200)

@@ -1,0 +1,289 @@
+/* =====================================================================================
+   Navigation layouts + UI models (set in Settings → Tampilan).
+   <html data-nav-pos="top|left|right|bottom">   where the floating navbar sits
+   <html data-ui-model="main|alt">               main = full bar with labels, alt = compact icon dock
+   Phones (≤820px) keep the bottom dock for every position: left/right collapse to the bottom dock.
+   ===================================================================================== */
+
+/* ---------- Shared: visually hidden label (alt model keeps it for screen readers) ------ */
+.nav-label-hidden,
+html[data-ui-model='alt'] .masthead .nav-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Desktop placements of the MAIN model -------------------------------------- */
+@media (min-width: 821px) {
+  html[data-nav-pos='bottom'] .masthead {
+    position: fixed;
+    top: auto;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: min(1120px, calc(100% - 28px));
+    height: 68px;
+    padding: 0 18px;
+    clip-path: none;
+    z-index: 120;
+  }
+  html[data-nav-pos='bottom'] .app-shell {
+    padding-bottom: 104px;
+  }
+
+  html[data-nav-pos='left'] .masthead,
+  html[data-nav-pos='right'] .masthead {
+    position: fixed;
+    top: 14px;
+    bottom: 14px;
+    width: 240px;
+    height: auto;
+    margin: 0;
+    padding: 18px 14px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 22px;
+    clip-path: none;
+    z-index: 120;
+  }
+  html[data-nav-pos='left'] .masthead {
+    left: 14px;
+  }
+  html[data-nav-pos='right'] .masthead {
+    right: 14px;
+  }
+  html[data-nav-pos='left'] .app-shell {
+    padding-left: 276px;
+  }
+  html[data-nav-pos='right'] .app-shell {
+    padding-right: 276px;
+  }
+  html[data-nav-pos='left'] .primary-nav,
+  html[data-nav-pos='right'] .primary-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    width: 100%;
+  }
+  html[data-nav-pos='left'] .primary-nav a,
+  html[data-nav-pos='right'] .primary-nav a {
+    justify-content: flex-start;
+    padding: 10px 12px;
+  }
+  html[data-nav-pos='left'] .account-nav,
+  html[data-nav-pos='right'] .account-nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  html[data-nav-pos='left'] .identity,
+  html[data-nav-pos='right'] .identity {
+    width: 100%;
+  }
+
+  /* Narrower sidebar on small laptops */
+  @media (max-width: 1200px) {
+    html[data-nav-pos='left'] .masthead,
+    html[data-nav-pos='right'] .masthead {
+      width: 210px;
+    }
+    html[data-nav-pos='left'] .app-shell {
+      padding-left: 246px;
+    }
+    html[data-nav-pos='right'] .app-shell {
+      padding-right: 246px;
+    }
+  }
+}
+
+/* ---------- ALT model: compact floating icon dock (desktop) --------------------------- */
+@media (min-width: 821px) {
+  html[data-ui-model='alt'] .masthead {
+    position: fixed;
+    z-index: 120;
+    width: max-content;
+    max-width: calc(100% - 28px);
+    height: auto;
+    margin: 0 auto;
+    padding: 8px 10px;
+    gap: 6px;
+    border-radius: 999px;
+    clip-path: none;
+    background: var(--nav);
+    backdrop-filter: blur(14px) saturate(1.2);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    box-shadow: 0 14px 40px rgba(2, 10, 25, 0.22);
+  }
+  html[data-ui-model='alt'] .masthead .chaldea-wordmark,
+  html[data-ui-model='alt'] .masthead .profile-chip span {
+    display: none;
+  }
+  html[data-ui-model='alt'] .masthead .identity {
+    padding: 0 6px;
+  }
+  html[data-ui-model='alt'] .primary-nav a {
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 999px;
+  }
+  html[data-ui-model='alt'] .primary-nav a::after {
+    display: none;
+  }
+  html[data-ui-model='alt'] .primary-nav {
+    gap: 4px;
+  }
+
+  /* Alt placements (the dock is centred horizontally at top/bottom, vertically at left/right) */
+  html[data-ui-model='alt'][data-nav-pos='top'] .masthead {
+    top: 14px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+  }
+  html[data-ui-model='alt'][data-nav-pos='top'] .app-shell {
+    padding-top: 96px;
+  }
+  html[data-ui-model='alt'][data-nav-pos='bottom'] .masthead {
+    top: auto;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    left: 0;
+    right: 0;
+  }
+  html[data-ui-model='alt'][data-nav-pos='bottom'] .app-shell {
+    padding-bottom: 104px;
+  }
+  html[data-ui-model='alt'][data-nav-pos='left'] .masthead,
+  html[data-ui-model='alt'][data-nav-pos='right'] .masthead {
+    flex-direction: column;
+    top: 50%;
+    bottom: auto;
+    width: auto;
+    padding: 12px 8px;
+    border-radius: 28px;
+    transform: translateY(-50%);
+  }
+  html[data-ui-model='alt'][data-nav-pos='left'] .masthead {
+    left: 14px;
+    right: auto;
+  }
+  html[data-ui-model='alt'][data-nav-pos='right'] .masthead {
+    right: 14px;
+    left: auto;
+  }
+  html[data-ui-model='alt'][data-nav-pos='left'] .app-shell {
+    padding-left: 92px;
+  }
+  html[data-ui-model='alt'][data-nav-pos='right'] .app-shell {
+    padding-right: 92px;
+  }
+  html[data-ui-model='alt'][data-nav-pos='left'] .identity,
+  html[data-ui-model='alt'][data-nav-pos='right'] .identity {
+    padding: 0;
+  }
+  html[data-ui-model='alt'][data-nav-pos='left'] .primary-nav,
+  html[data-ui-model='alt'][data-nav-pos='right'] .primary-nav,
+  html[data-ui-model='alt'][data-nav-pos='left'] .account-nav,
+  html[data-ui-model='alt'][data-nav-pos='right'] .account-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ---------- Phones: keep the bottom dock, but the alt model compacts the top bar ----------- */
+@media (max-width: 820px) {
+  html[data-ui-model='alt'] .masthead .profile-chip span,
+  html[data-ui-model='alt'] .masthead .chaldea-wordmark {
+    display: none;
+  }
+  html[data-ui-model='alt'] .masthead {
+    height: 56px;
+  }
+  html[data-ui-model='alt'] .primary-nav {
+    bottom: max(12px, env(safe-area-inset-bottom));
+    left: 50%;
+    right: auto;
+    width: min(440px, calc(100% - 24px));
+    transform: translateX(-50%);
+    border-radius: 999px;
+    clip-path: none;
+  }
+  html[data-ui-model='alt'] .primary-nav a {
+    padding: 0;
+  }
+  /* The bottom dock covers the page: keep room for it so the last section stays readable. */
+  html[data-nav-pos] .app-shell {
+    padding-bottom: 96px;
+  }
+}
+
+/* ---------- Settings: the Tampilan card --------------------------------------------- */
+.dsp-card {
+  display: grid;
+  gap: 18px;
+}
+.dsp-group {
+  display: grid;
+  gap: 8px;
+}
+.dsp-label {
+  font: 500 11px 'IBM Plex Mono', monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.dsp-seg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dsp-seg button {
+  padding: 9px 16px;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--text);
+  font: 500 12px 'IBM Plex Mono', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.dsp-seg button:hover {
+  border-color: var(--accent-bright);
+}
+.dsp-seg button.is-on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.dsp-seg button:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+
+/* ---------- Settings shortcut in the navbar ---------------------------------------------- */
+.settings-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: inherit;
+  border: 1px solid var(--border);
+  background: transparent;
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+.settings-chip:hover,
+.settings-chip:focus-visible {
+  border-color: var(--accent-bright);
+}

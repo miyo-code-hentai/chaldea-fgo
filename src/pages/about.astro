@@ -1,0 +1,13 @@
+---
+import ChaldeaApp from '@/components/ChaldeaApp.svelte'
+import Layout from '@/layouts/Layout.astro'
+
+export const prerender = true
+---
+
+<Layout
+  title="About Chaldea | Security Organization"
+  description="Explore Chaldea’s mission, personnel, systems, and Human Order operations."
+>
+  <ChaldeaApp client:load initialPage="observatory" />
+</Layout>

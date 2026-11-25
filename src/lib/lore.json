@@ -1,0 +1,1177 @@
+{
+  "chapters": [
+    {
+      "id": "incineration",
+      "records": [
+        {
+          "id": "fuyuki",
+          "number": "F",
+          "era": "A.D. 2004",
+          "location": "Fuyuki",
+          "title": "Flame-Contaminated City",
+          "summary": "After a disaster strikes Chaldea, a lone Master and Mash are sent to a burning Fuyuki in 2004, where a Holy Grail War is still underway. They must find out why the city was consumed by flames.",
+          "characters": [
+            {
+              "slug": "cu-chulainn-caster",
+              "name": "Cú Chulainn (Caster)",
+              "role": "Ally",
+              "class": "Caster",
+              "note": "Temporary ally who guides the party through Fuyuki"
+            },
+            {
+              "slug": "altria-alter",
+              "name": "Altria Alter",
+              "role": "Antagonist",
+              "class": "Saber",
+              "note": "Darkened Saber guarding the Holy Grail"
+            },
+            {
+              "slug": "mash-kyrielight",
+              "name": "Mash Kyrielight",
+              "role": "Ally",
+              "class": "Shielder",
+              "note": "Demi-Servant who becomes the Master's partner"
+            },
+            {
+              "slug": "olga-marie-animusphere",
+              "name": "Olga Marie Animusphere",
+              "role": "Chaldea",
+              "class": "",
+              "note": "Chaldea's director, accompanies the team"
+            }
+          ]
+        },
+        {
+          "id": "orleans",
+          "number": "1",
+          "era": "A.D. 1431",
+          "location": "Orleans",
+          "title": "Hundred Years' War of the Evil Dragons",
+          "summary": "Chaldea arrives in a France supposedly at peace shortly after Jeanne d'Arc's execution and finds it overrun by dragons and undead. The team gathers allies to resist the mysterious Dragon Witch.",
+          "characters": [
+            {
+              "slug": "jeanne-d-arc",
+              "name": "Jeanne d'Arc",
+              "role": "Ally",
+              "class": "Ruler",
+              "note": "Holy Maiden of France who joins Chaldea"
+            },
+            {
+              "slug": "jeanne-d-arc-alter",
+              "name": "Jeanne d'Arc (Alter)",
+              "role": "Antagonist",
+              "class": "Avenger",
+              "note": "The Dragon Witch commanding the dragons"
+            },
+            {
+              "slug": "gilles-de-rais",
+              "name": "Gilles de Rais",
+              "role": "Antagonist",
+              "class": "Caster",
+              "note": "Marshal of France serving the Dragon Witch"
+            },
+            {
+              "slug": "marie-antoinette",
+              "name": "Marie Antoinette",
+              "role": "Ally",
+              "class": "Rider",
+              "note": "Joins the allied Servants"
+            }
+          ]
+        },
+        {
+          "id": "septem",
+          "number": "2",
+          "era": "A.D. 60",
+          "location": "Septem",
+          "title": "Eternal Madness Empire",
+          "summary": "In the Roman Empire of 60 A.D., young Emperor Nero fights a rival Roman Empire formed by legendary Servants. Chaldea joins Nero's army to find the Holy Grail.",
+          "characters": [
+            {
+              "slug": "nero-claudius",
+              "name": "Nero Claudius",
+              "role": "Ally",
+              "class": "Saber",
+              "note": "Living emperor who leads the resistance"
+            },
+            {
+              "slug": "boudica",
+              "name": "Boudica",
+              "role": "Ally",
+              "class": "Rider",
+              "note": "Warrior queen who aids Nero's army"
+            },
+            {
+              "slug": "spartacus",
+              "name": "Spartacus",
+              "role": "Ally",
+              "class": "Berserker",
+              "note": "Gladiator rebel who fights alongside Nero"
+            },
+            {
+              "slug": "caligula",
+              "name": "Caligula",
+              "role": "Antagonist",
+              "class": "Berserker",
+              "note": "Emperor serving the rival empire"
+            }
+          ]
+        },
+        {
+          "id": "okeanos",
+          "number": "3",
+          "era": "A.D. 1573",
+          "location": "Okeanos",
+          "title": "Sealed Ends of the Four Seas",
+          "summary": "Chaldea sails an endless, unstable ocean scattered with islands, meeting pirate captain Francis Drake who holds a powerful Holy Grail. The voyage involves pirates, legendary heroes, and rival claims to the Grail.",
+          "characters": [
+            {
+              "slug": "francis-drake",
+              "name": "Francis Drake",
+              "role": "Ally",
+              "class": "Rider",
+              "note": "Pirate captain who joins Chaldea's voyage"
+            },
+            {
+              "slug": "artemis-orion",
+              "name": "Artemis & Orion",
+              "role": "Ally",
+              "class": "Archer",
+              "note": "Divine archer and her bear-plush companion"
+            },
+            {
+              "slug": "euryale",
+              "name": "Euryale",
+              "role": "Ally",
+              "class": "Archer",
+              "note": "Goddess who joins as an ally"
+            },
+            {
+              "slug": "medea-lily",
+              "name": "Medea Lily",
+              "role": "Antagonist",
+              "class": "Caster",
+              "note": "Young witch among the Argonauts' rivals"
+            }
+          ]
+        },
+        {
+          "id": "london",
+          "number": "4",
+          "era": "A.D. 1888",
+          "location": "London",
+          "title": "Death World in the Demonic Fog City",
+          "summary": "A poisonous magical fog blankets Industrial Revolution London while Servants clash in the streets. Chaldea teams up with the city's local Servants to uncover who is behind it.",
+          "characters": [
+            {
+              "slug": "mordred",
+              "name": "Mordred",
+              "role": "Ally",
+              "class": "Saber",
+              "note": "Knight who joins Chaldea's party"
+            },
+            {
+              "slug": "henry-jekyll-hyde",
+              "name": "Henry Jekyll & Hyde",
+              "role": "Ally",
+              "class": "Assassin",
+              "note": "Doctor-and-monster duo"
+            },
+            {
+              "slug": "charles-babbage",
+              "name": "Charles Babbage",
+              "role": "Antagonist",
+              "class": "Caster",
+              "note": "Steam-technology inventor serving the enemy"
+            },
+            {
+              "slug": "jack-the-ripper",
+              "name": "Jack the Ripper",
+              "role": "Antagonist",
+              "class": "Assassin",
+              "note": "Killer haunting the foggy streets"
+            }
+          ]
+        },
+        {
+          "id": "e-pluribus-unum",
+          "number": "5",
+          "era": "A.D. 1783",
+          "location": "E Pluribus Unum",
+          "title": "North American Myth War",
+          "summary": "North America is split between a Celtic army and Edison's robot-backed Americans, with a resistance caught in between. Chaldea steps into the war to reach the Holy Grail.",
+          "characters": [
+            {
+              "slug": "queen-medb",
+              "name": "Queen Medb",
+              "role": "Antagonist",
+              "class": "Rider",
+              "note": "Leads the Celtic nation's conquest"
+            },
+            {
+              "slug": "cu-chulainn-alter",
+              "name": "Cú Chulainn (Alter)",
+              "role": "Antagonist",
+              "class": "Berserker",
+              "note": "Twisted champion created by Medb"
+            },
+            {
+              "slug": "thomas-edison",
+              "name": "Thomas Edison",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Leads the American side with robot armies"
+            },
+            {
+              "slug": "geronimo",
+              "name": "Geronimo",
+              "role": "Ally",
+              "class": "Assassin",
+              "note": "Leads the resistance against both sides"
+            }
+          ]
+        },
+        {
+          "id": "camelot",
+          "number": "6",
+          "era": "A.D. 1273",
+          "location": "Camelot",
+          "title": "Divine Realm of the Round Table",
+          "summary": "In an impossible holy city in the Holy Land, a former legendary king rules over knights who admit only those she deems worthy. Chaldea navigates rival powers to reach the city.",
+          "characters": [
+            {
+              "slug": "bedivere",
+              "name": "Bedivere",
+              "role": "Ally",
+              "class": "Saber",
+              "note": "Last knight who guides the party"
+            },
+            {
+              "slug": "lion-king-altria-pendragon",
+              "name": "Lion King (Altria Pendragon)",
+              "role": "Antagonist",
+              "class": "Lancer",
+              "note": "Ruler of the Holy City"
+            },
+            {
+              "slug": "ozymandias",
+              "name": "Ozymandias",
+              "role": "Ally",
+              "class": "",
+              "note": "Desert god-king, first an obstacle then an ally"
+            },
+            {
+              "slug": "gawain",
+              "name": "Gawain",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Knight of the Round Table serving the Lion King"
+            }
+          ]
+        },
+        {
+          "id": "babylonia",
+          "number": "7",
+          "era": "B.C. 2655",
+          "location": "Babylonia",
+          "title": "Absolute Demonic Front",
+          "summary": "In ancient Mesopotamia during King Gilgamesh's reign, an alliance of three goddesses threatens Uruk and the cities around it. Chaldea aids Gilgamesh's coalition against the divine threat.",
+          "characters": [
+            {
+              "slug": "gilgamesh",
+              "name": "Gilgamesh",
+              "role": "Ally",
+              "class": "Caster",
+              "note": "Wise King of Uruk, alive in this era"
+            },
+            {
+              "slug": "ishtar",
+              "name": "Ishtar",
+              "role": "Ally",
+              "class": "",
+              "note": "Goddess tied to Uruk's fate"
+            },
+            {
+              "slug": "merlin",
+              "name": "Merlin",
+              "role": "Ally",
+              "class": "Caster",
+              "note": "Magus who aids Gilgamesh"
+            },
+            {
+              "slug": "tiamat",
+              "name": "Tiamat",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Primordial goddess leading the threat"
+            }
+          ]
+        },
+        {
+          "id": "solomon",
+          "number": "Ω",
+          "era": "Outside history",
+          "location": "Solomon",
+          "title": "Grand Temple of Time",
+          "summary": "After seven Singularities are repaired, Chaldea finds a final battleground that exists outside history. It must face the 72 Demon Gods guarding King Solomon's throne.",
+          "characters": [
+            {
+              "slug": "solomon",
+              "name": "Solomon",
+              "role": "Antagonist",
+              "class": "Caster",
+              "note": "Mage King holding the throne of time"
+            },
+            {
+              "slug": "lev-lainur-flauros",
+              "name": "Lev Lainur Flauros",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Former Chaldea staff in service of the King of Magic"
+            },
+            {
+              "slug": "romani-archaman",
+              "name": "Romani Archaman",
+              "role": "Chaldea",
+              "class": "",
+              "note": "Chaldea's acting director and mission support"
+            },
+            {
+              "slug": "mash-kyrielight",
+              "name": "Mash Kyrielight",
+              "role": "Ally",
+              "class": "Shielder",
+              "note": "Stays at the Master's side to the end"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remnant",
+      "records": [
+        {
+          "id": "shinjuku",
+          "number": "I",
+          "era": "A.D. 1999",
+          "location": "Shinjuku",
+          "title": "Quarantined Territory of Malice",
+          "summary": "Chaldea detects a Singularity in Shinjuku and sends its only Master to investigate. A magical barrier disrupts their arrival in a city under siege.",
+          "characters": [
+            {
+              "slug": "altria-alter",
+              "name": "Altria Alter",
+              "role": "Ally",
+              "class": "Saber",
+              "note": "Saber of Shinjuku's conflict"
+            },
+            {
+              "slug": "james-moriarty",
+              "name": "James Moriarty",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Mastermind connected to the city's conflict"
+            },
+            {
+              "slug": "sherlock-holmes",
+              "name": "Sherlock Holmes",
+              "role": "Ally",
+              "class": "",
+              "note": "Detective Servant in Shinjuku"
+            },
+            {
+              "slug": "mash-kyrielight",
+              "name": "Mash Kyrielight",
+              "role": "Chaldea",
+              "class": "",
+              "note": "Supports the Master from Mission Control"
+            }
+          ]
+        },
+        {
+          "id": "seraph",
+          "number": "EX",
+          "era": "Digital world",
+          "location": "SE.RA.PH",
+          "title": "Deep Sea Cyber-Paradise",
+          "summary": "Chaldea receives an SOS from the oil platform Seraphix, and the Master is sent in through the AI BB. They end up in a digital world where Servants must fight one another to escape.",
+          "characters": [
+            {
+              "slug": "bb",
+              "name": "BB",
+              "role": "Antagonist",
+              "class": "",
+              "note": "AI who orchestrates the event"
+            },
+            {
+              "slug": "gawain",
+              "name": "Gawain",
+              "role": "Ally",
+              "class": "",
+              "note": "Accompanies the Master in SE.RA.PH"
+            },
+            {
+              "slug": "tamamo-cat",
+              "name": "Tamamo Cat",
+              "role": "Ally",
+              "class": "",
+              "note": "Accompanies the Master in SE.RA.PH"
+            },
+            {
+              "slug": "emiya-alter",
+              "name": "EMIYA Alter",
+              "role": "Ally",
+              "class": "",
+              "note": "Accompanies the Master in SE.RA.PH"
+            }
+          ]
+        },
+        {
+          "id": "agartha",
+          "number": "II",
+          "era": "A.D. 2000",
+          "location": "Agartha",
+          "title": "Subterranean World of Folklore",
+          "summary": "People are vanishing across Central Asia, and several Chaldea Servants are pulled into a new Singularity. The Master investigates a giant hollow world beneath the earth.",
+          "characters": [
+            {
+              "slug": "scheherazade",
+              "name": "Scheherazade",
+              "role": "Antagonist",
+              "class": "Caster",
+              "note": "Caster of the Nightless City"
+            },
+            {
+              "slug": "wu-zetian",
+              "name": "Wu Zetian",
+              "role": "Antagonist",
+              "class": "Assassin",
+              "note": "Assassin of the Nightless City"
+            },
+            {
+              "slug": "penthesilea",
+              "name": "Penthesilea",
+              "role": "Ally",
+              "class": "Berserker",
+              "note": "Berserker of El Dorado"
+            },
+            {
+              "slug": "christopher-columbus",
+              "name": "Christopher Columbus",
+              "role": "Ally",
+              "class": "Rider",
+              "note": "Rider of Resistance"
+            }
+          ]
+        },
+        {
+          "id": "shimosa",
+          "number": "III",
+          "era": "A.D. 1639",
+          "location": "Shimosa",
+          "title": "The Stage of Carnage",
+          "summary": "Ritsuka is pulled through a dream into a pocket world between dream and reality, where Heroic Spirit Swordmasters duel. The Master teams up with Miyamoto Musashi to deal with the threat.",
+          "characters": [
+            {
+              "slug": "miyamoto-musashi",
+              "name": "Miyamoto Musashi",
+              "role": "Ally",
+              "class": "Saber",
+              "note": "Living Hero who partners with the Master"
+            },
+            {
+              "slug": "amakusa-shirou-tokisada",
+              "name": "Amakusa Shirou Tokisada",
+              "role": "Antagonist",
+              "class": "Avenger",
+              "note": "Swordmaster at the center of the conflict"
+            },
+            {
+              "slug": "senji-muramasa",
+              "name": "Senji Muramasa",
+              "role": "Ally",
+              "class": "Saber",
+              "note": "Swordsmith who joins the fight"
+            },
+            {
+              "slug": "tomoe-gozen",
+              "name": "Tomoe Gozen",
+              "role": "Antagonist",
+              "class": "Archer",
+              "note": "Archer of Inferno, a Swordmaster"
+            }
+          ]
+        },
+        {
+          "id": "salem",
+          "number": "IV",
+          "era": "A.D. 1692",
+          "location": "Salem",
+          "title": "The Forbidden Advent Garden",
+          "summary": "A vast dark barrier cuts off Salem from the outside world, and the town resembles its 1692 past but something is wrong. Ritsuka's party enters disguised as a traveling troupe.",
+          "characters": [
+            {
+              "slug": "abigail-williams",
+              "name": "Abigail Williams",
+              "role": "Ally",
+              "class": "Foreigner",
+              "note": "Central girl of Salem's mystery"
+            },
+            {
+              "slug": "charles-henri-sanson",
+              "name": "Charles-Henri Sanson",
+              "role": "Ally",
+              "class": "Assassin",
+              "note": "Executioner Servant in the party"
+            },
+            {
+              "slug": "mata-hari",
+              "name": "Mata Hari",
+              "role": "Ally",
+              "class": "Assassin",
+              "note": "Dancer-spy Servant in the troupe"
+            },
+            {
+              "slug": "mephistopheles",
+              "name": "Mephistopheles",
+              "role": "Ally",
+              "class": "Caster",
+              "note": "Enigmatic Caster in Salem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lostbelt",
+      "records": [
+        {
+          "id": "anastasia",
+          "number": "1",
+          "era": "Russia",
+          "location": "Anastasia",
+          "title": "Permafrost Empire",
+          "summary": "After human history is wiped out and split into seven Lostbelts, the last survivors of Chaldea cross a frozen world to reclaim it. The first Lostbelt is a Russia ruled by a snowbound empire.",
+          "characters": [
+            {
+              "slug": "anastasia",
+              "name": "Anastasia",
+              "role": "Ally",
+              "class": "Caster",
+              "note": "Princess of Ice who joins Chaldea"
+            },
+            {
+              "slug": "kadoc-zemlupus",
+              "name": "Kadoc Zemlupus",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Crypter tied to the Lostbelt"
+            },
+            {
+              "slug": "ivan-the-terrible",
+              "name": "Ivan the Terrible",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Tsar who rules the Permafrost Empire"
+            },
+            {
+              "slug": "atalante",
+              "name": "Atalante",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Servant appearing on the official chapter page"
+            }
+          ]
+        },
+        {
+          "id": "gotterdammerung",
+          "number": "2",
+          "era": "Scandinavia",
+          "location": "Götterdämmerung",
+          "title": "The Eternal Icy Fire Century",
+          "summary": "Chaldea seeks the Beldanders of the Wandering Sea to repair the Shadow Border and travels overland through a transformed Scandinavia. There humanity lives under the rule of the Jötunn.",
+          "characters": [
+            {
+              "slug": "scathach-skai",
+              "name": "Scáthach-Skaði",
+              "role": "Ally",
+              "class": "",
+              "note": "The Lostbelt's ruler, later aids Chaldea"
+            },
+            {
+              "slug": "napoleon",
+              "name": "Napoleon",
+              "role": "Ally",
+              "class": "",
+              "note": "Joins the party as comic relief"
+            },
+            {
+              "slug": "sigurd",
+              "name": "Sigurd",
+              "role": "Antagonist",
+              "class": "Saber",
+              "note": "Appears as a masked Saber"
+            },
+            {
+              "slug": "ophelia-phamrsolone",
+              "name": "Ophelia Phamrsolone",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Crypter with a complicated role"
+            }
+          ]
+        },
+        {
+          "id": "sin",
+          "number": "3",
+          "era": "China",
+          "location": "SIN",
+          "title": "The Synchronized Intellect Nation",
+          "summary": "Chaldea reaches a peaceful but stagnant empire where independent thought is a crime, after a poisoning forces the party to seek a cure. The ruler's worldview clashes with Chaldea's push for progress.",
+          "characters": [
+            {
+              "slug": "qin-shi-huang",
+              "name": "Qin Shi Huang",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Ruler who calls himself the only true human"
+            },
+            {
+              "slug": "prince-of-lan-ling",
+              "name": "Prince of Lan Ling",
+              "role": "Ally",
+              "class": "Saber",
+              "note": "Saber featured on the official chapter page"
+            },
+            {
+              "slug": "jing-ke",
+              "name": "Jing Ke",
+              "role": "Ally",
+              "class": "Assassin",
+              "note": "Helps Chaldea within the Lostbelt"
+            },
+            {
+              "slug": "akuta-hinako",
+              "name": "Akuta Hinako",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Listed as the Crypter of this Lostbelt"
+            }
+          ]
+        },
+        {
+          "id": "yugakshetra",
+          "number": "4",
+          "era": "India",
+          "location": "Yuga Kshetra",
+          "title": "Samsara of Genesis and Terminus",
+          "summary": "Chaldea travels to India to upgrade the Shadow Border and finds a land whose people pray daily under a god. The world is caught in an endless cycle of rebirth meant to purge evil.",
+          "characters": [
+            {
+              "slug": "karna",
+              "name": "Karna",
+              "role": "Ally",
+              "class": "",
+              "note": "Hero of Indian myth who aids Chaldea"
+            },
+            {
+              "slug": "rama",
+              "name": "Rama",
+              "role": "Ally",
+              "class": "",
+              "note": "Hero of Indian myth who aids Chaldea"
+            },
+            {
+              "slug": "asvatthaman",
+              "name": "Aśvatthāman",
+              "role": "Ally",
+              "class": "Archer",
+              "note": "Archer shown on the official chapter page"
+            },
+            {
+              "slug": "scandinavia-peperoncino",
+              "name": "Scandinavia Peperoncino",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Crypter of this Lostbelt"
+            }
+          ]
+        },
+        {
+          "id": "atlantis",
+          "number": "5",
+          "era": "Atlantic Ocean",
+          "location": "Atlantis",
+          "title": "Ancient Ocean of the Dreadnought Gods",
+          "summary": "Chaldea assaults the Greek Lostbelt as Kirschtaria Wodime's forces wait at the entrance, and the Nautilus is lost early. The survivors regroup and push through the Atlantis seas toward Olympus.",
+          "characters": [
+            {
+              "slug": "super-orion",
+              "name": "Super Orion",
+              "role": "Ally",
+              "class": "Archer",
+              "note": "Grand Archer whose true strength emerges here"
+            },
+            {
+              "slug": "jason",
+              "name": "Jason",
+              "role": "Ally",
+              "class": "",
+              "note": "Captain of the Argonauts, leads the new crew"
+            },
+            {
+              "slug": "kirschtaria-wodime",
+              "name": "Kirschtaria Wodime",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Crypter commanding the enemy army"
+            },
+            {
+              "slug": "odysseus",
+              "name": "Odysseus",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Commands the Atlantis navy"
+            }
+          ]
+        },
+        {
+          "id": "olympus",
+          "number": "5",
+          "era": "Olympus",
+          "location": "Olympus",
+          "title": "Interstellar Mountainous City",
+          "summary": "Chaldea reaches the floating city of Olympus, built as the throne of the superior deities. It joins the God Destroyer Alliance in the final confrontation between humanity and the gods.",
+          "characters": [
+            {
+              "slug": "zeus",
+              "name": "Zeus",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Lord of the Olympians"
+            },
+            {
+              "slug": "kirschtaria-wodime",
+              "name": "Kirschtaria Wodime",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Leader of the Crypters"
+            },
+            {
+              "slug": "romulus-quirinus",
+              "name": "Romulus-Quirinus",
+              "role": "Ally",
+              "class": "Lancer",
+              "note": "Grand Lancer in the God Destroyer Alliance"
+            },
+            {
+              "slug": "orion",
+              "name": "Orion",
+              "role": "Ally",
+              "class": "Archer",
+              "note": "Grand Archer in the God Destroyer Alliance"
+            }
+          ]
+        },
+        {
+          "id": "heian-kyo",
+          "number": "5.5",
+          "era": "Japan",
+          "location": "Heian-kyo",
+          "title": "Naraka Mandala",
+          "summary": "After returning from the Atlantic Lostbelt, Chaldea discovers an anomaly in Heian-kyo, a capital turned into a land of evil spirits. The city hosts a twisted Holy Grail War centered on Heroic Spirits.",
+          "characters": [
+            {
+              "slug": "ashiya-douman",
+              "name": "Ashiya Douman",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Rogue onmyoji tied to the ritual"
+            },
+            {
+              "slug": "taira-no-kagekiyo",
+              "name": "Taira no Kagekiyo",
+              "role": "Antagonist",
+              "class": "Avenger",
+              "note": "Samurai spirit hunting the Heroic Spirits"
+            },
+            {
+              "slug": "watanabe-no-tsuna",
+              "name": "Watanabe no Tsuna",
+              "role": "Ally",
+              "class": "",
+              "note": "Retainer who joins the opposition"
+            },
+            {
+              "slug": "sakata-kintoki",
+              "name": "Sakata Kintoki",
+              "role": "Ally",
+              "class": "",
+              "note": "Retainer who joins the opposition"
+            }
+          ]
+        },
+        {
+          "id": "avalon-le-fae",
+          "number": "6",
+          "era": "Britain",
+          "location": "Avalon le Fae",
+          "title": "Fae Round Table Domain",
+          "summary": "Chaldea learns the British Lostbelt survived the destruction of its Tree of Emptiness and threatens to doom the planet. The team enters a fairy-ruled Britain and meets twisted Knights of the Round Table.",
+          "characters": [
+            {
+              "slug": "altria-caster",
+              "name": "Altria Caster",
+              "role": "Ally",
+              "class": "Caster",
+              "note": "The Avalon le Fae of the prophecy"
+            },
+            {
+              "slug": "morgan-le-fae",
+              "name": "Morgan le Fae",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Ruler of this Britain's Camelot"
+            },
+            {
+              "slug": "beryl-gut",
+              "name": "Beryl Gut",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Crypter acting as a traitor"
+            },
+            {
+              "slug": "oberon-vortigern",
+              "name": "Oberon Vortigern",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Final antagonist"
+            }
+          ]
+        },
+        {
+          "id": "traum",
+          "number": "6.5",
+          "era": "Three-realm world",
+          "location": "Traum",
+          "title": "Realm of the Thanatos Impulse",
+          "summary": "Chaldea detects a massive Singularity with an immeasurable Humanity Foundation Value. The world is split into three realms, each ruled by a king, with Servants constantly summoned to fight one another.",
+          "characters": [
+            {
+              "slug": "charlemagne",
+              "name": "Charlemagne",
+              "role": "Featured Servant",
+              "class": "Saber",
+              "note": "Featured Servant of the chapter"
+            },
+            {
+              "slug": "kriemhild",
+              "name": "Kriemhild",
+              "role": "Featured Servant",
+              "class": "Berserker",
+              "note": "Featured Servant of the chapter"
+            },
+            {
+              "slug": "roland",
+              "name": "Roland",
+              "role": "Featured Servant",
+              "class": "Saber",
+              "note": "Featured Servant of the chapter"
+            },
+            {
+              "slug": "james-moriarty",
+              "name": "James Moriarty",
+              "role": "Featured Servant",
+              "class": "Ruler",
+              "note": "Traum version, class Ruler"
+            }
+          ]
+        },
+        {
+          "id": "nahui-mictlan",
+          "number": "7",
+          "era": "South America",
+          "location": "Nahui Mictlan",
+          "title": "Golden Sea of Trees Travelogue",
+          "summary": "Chaldea sets out to take on the final Lostbelt and finds the surface a lifeless wasteland. The protagonist descends into an underworld beneath the former Amazon rainforest.",
+          "characters": [
+            {
+              "slug": "tezcatlipoca",
+              "name": "Tezcatlipoca",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Controls the Underworld"
+            },
+            {
+              "slug": "daybit-sem-void",
+              "name": "Daybit Sem Void",
+              "role": "Antagonist",
+              "class": "",
+              "note": "The last Crypter"
+            },
+            {
+              "slug": "kukulkan",
+              "name": "Kukulkan",
+              "role": "Ally",
+              "class": "",
+              "note": "Ally native to the Underworld"
+            },
+            {
+              "slug": "sion-eltnam-atlasia",
+              "name": "Sion Eltnam Atlasia",
+              "role": "Ally",
+              "class": "",
+              "note": "Atlas alchemist who supports Chaldea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ordeal",
+      "records": [
+        {
+          "id": "paper-moon",
+          "number": "I",
+          "era": "After Lostbelt No.7",
+          "location": "Paper Moon",
+          "title": "Zero Compass Inner Domain, Paper Moon",
+          "summary": "Chaldea enters a world covered in strange light pouring from the Paper Moon. A system run by an AI rewards Servants for killing civilian AIs.",
+          "characters": [
+            {
+              "slug": "rani-xii",
+              "name": "Rani XII",
+              "role": "Antagonist",
+              "class": "",
+              "note": "AI overseer who runs the system"
+            },
+            {
+              "slug": "bhima",
+              "name": "Bhīma",
+              "role": "Ally",
+              "class": "",
+              "note": "New Servant featured in this chapter"
+            },
+            {
+              "slug": "duryodhana",
+              "name": "Duryodhana",
+              "role": "Ally",
+              "class": "",
+              "note": "New Servant featured in this chapter"
+            },
+            {
+              "slug": "durga",
+              "name": "Durga",
+              "role": "Antagonist",
+              "class": "",
+              "note": "Rani's Servant in this chapter"
+            }
+          ]
+        },
+        {
+          "id": "id",
+          "number": "II",
+          "era": "After Lostbelt No.7",
+          "location": "Id",
+          "title": "The Inescapable Gehenna, Id",
+          "summary": "The second Ordeal Call continues the effort to correct a distortion with seven trials. Its theme centers on the Avenger class.",
+          "characters": [
+            {
+              "slug": "jeanne-d-arc-alter",
+              "name": "Jeanne d'Arc (Alter)",
+              "role": "Featured Servant",
+              "class": "Avenger",
+              "note": "Receives a Rank Up Quest with this chapter"
+            },
+            {
+              "slug": "marie-antoinette-alter",
+              "name": "Marie Antoinette (Alter)",
+              "role": "Featured Servant",
+              "class": "",
+              "note": "Featured in the chapter's pickup summon"
+            },
+            {
+              "slug": "taira-no-kagekiyo",
+              "name": "Taira no Kagekiyo",
+              "role": "Featured Servant",
+              "class": "",
+              "note": "Featured in the chapter's pickup summon"
+            },
+            {
+              "slug": "edmond-dantes-monte-cristo",
+              "name": "Edmond Dantes (Monte Cristo)",
+              "role": "Featured Servant",
+              "class": "",
+              "note": "Featured in the chapter's pickup summon"
+            }
+          ]
+        },
+        {
+          "id": "archetype-inception",
+          "number": "III",
+          "era": "After Lostbelt No.7",
+          "location": "Archetype Inception",
+          "title": "Bellum Novae Humanitatis, Archetype Inception",
+          "summary": "In a future city on the Moon without mortality or strife, Moon Cancers compete in a grand election for the world's highest honor. The protagonists must expose a cancer behind the schemes.",
+          "characters": [
+            {
+              "slug": "bb-dubai",
+              "name": "BB Dubai",
+              "role": "Featured Servant",
+              "class": "Moon Cancer",
+              "note": "Featured limited-time Servant"
+            },
+            {
+              "slug": "kishinami-hakuno",
+              "name": "Kishinami Hakuno",
+              "role": "Featured Servant",
+              "class": "Moon Cancer",
+              "note": "New Servant obtained by clearing Part 3"
+            },
+            {
+              "slug": "tenochtitlan",
+              "name": "Tenochtitlan",
+              "role": "Featured Servant",
+              "class": "Moon Cancer",
+              "note": "Featured limited-time Servant"
+            },
+            {
+              "slug": "mysterious-heroine-xx-alter",
+              "name": "Mysterious Heroine XX (Alter)",
+              "role": "Featured Servant",
+              "class": "Foreigner",
+              "note": "Featured limited-time Servant"
+            }
+          ]
+        },
+        {
+          "id": "trinity-metatronius",
+          "number": "IV",
+          "era": "After Lostbelt No.7",
+          "location": "Trinity Metatronius",
+          "title": "Human Judgment Court, Trinity Metatronius",
+          "summary": "The Ruler-class Servants of the Holy Grail War are the next distortion to be corrected, and Chaldea's abuse of them will be judged. The chapter unlocks after Ordeal Call II and III.",
+          "characters": [
+            {
+              "slug": "metatron-jeanne",
+              "name": "Metatron Jeanne",
+              "role": "Featured Servant",
+              "class": "",
+              "note": "Limited-time 5-star Servant added with the chapter"
+            },
+            {
+              "slug": "ashoka",
+              "name": "Ashoka",
+              "role": "Featured Servant",
+              "class": "",
+              "note": "New 4-star story-summon Servant"
+            },
+            {
+              "slug": "dante-alighieri",
+              "name": "Dante Alighieri",
+              "role": "Featured Servant",
+              "class": "",
+              "note": "Joins the story summon after the chapter"
+            }
+          ]
+        },
+        {
+          "id": "lostbelt-0",
+          "number": "0",
+          "era": "After Ordeal Call IV",
+          "location": "Lostbelt No.0",
+          "title": "The Special Chapter",
+          "summary": "A special chapter placed after Ordeal Call IV. It closes Chapter II the way Solomon closes Chapter I.",
+          "characters": [
+            {
+              "slug": "ritsuka-fujimaru",
+              "name": "Ritsuka Fujimaru",
+              "role": "Master",
+              "class": "",
+              "note": "Chaldea's Master and protagonist"
+            },
+            {
+              "slug": "mash-kyrielight",
+              "name": "Mash Kyrielight",
+              "role": "Ally",
+              "class": "",
+              "note": "The Master's partner"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "staff": [
+    {
+      "slug": "marisbury-animusphere",
+      "name": "Marisbury Animusphere",
+      "role": "Founder and director of Chaldea (until his death)",
+      "status": "Deceased",
+      "bio": "Founded the Chaldea Security Organization and was father of Olga Marie Animusphere, who succeeded him as director. One wiki page gives his death year as 2012 and says he reportedly won the 2004 Fuyuki Holy Grail War, but sources fetched do not give circumstances or his wish, and Holmes can only speculate about his motives."
+    },
+    {
+      "slug": "olga-marie-animusphere",
+      "name": "Olga Marie Animusphere",
+      "role": "Director of Chaldea (2012-2015 per wiki)",
+      "status": "Presumed deceased (true status unclear)",
+      "bio": "Daughter of Marisbury, she inherited the post of director after his death. She is present at the start of Singularity F, and the wiki lists her status as presumed deceased with her true status unknown."
+    },
+    {
+      "slug": "romani-archaman",
+      "name": "Romani Archaman",
+      "role": "Head of Chaldea's medical division; acting director",
+      "status": "Deceased (traces of his presence remain in Lostbelt No.7)",
+      "bio": "Chaldea's doctor who provides support from the control room and takes over as director after Olga. He is listed as director from 2015 to 2016."
+    },
+    {
+      "slug": "leonardo-da-vinci",
+      "name": "Leonardo da Vinci",
+      "role": "Head of the Technology Development Division",
+      "status": "Active (Servant with backup body)",
+      "bio": "A Caster-class Servant who leads Chaldea's technology development and later acts as its leader during the Epic of Remnant. She is listed as director in 2017."
+    },
+    {
+      "slug": "mash-kyrielight",
+      "name": "Mash Kyrielight",
+      "role": "Demi-Servant (Shielder) and the Master's partner",
+      "status": "Active",
+      "bio": "A Demi-Servant who fights alongside Ritsuka from Singularity F onward. She serves as Mission Control in some chapters, such as Shinjuku."
+    },
+    {
+      "slug": "goredolf-musik",
+      "name": "Goredolf Musik",
+      "role": "Director and owner of Chaldea (from 2018 per wiki)",
+      "status": "Active",
+      "bio": "A Clock Tower magus who took over Chaldea after Olga's death and bought the organization after the Remnant Order. He was poisoned during Lostbelt No.3 and recovered with an antidote."
+    },
+    {
+      "slug": "sherlock-holmes",
+      "name": "Sherlock Holmes",
+      "role": "Servant and advisor to Chaldea",
+      "status": "Active",
+      "bio": "A detective Servant contracted to Ritsuka who advises from the Atlas Institute. He analyzes Marisbury's 2004 Fuyuki Holy Grail War and cannot rule out that Marisbury was manipulated."
+    },
+    {
+      "slug": "ritsuka-fujimaru",
+      "name": "Ritsuka Fujimaru",
+      "role": "Master and protagonist",
+      "status": "Active",
+      "bio": "An untrained civilian Master candidate thrust into Fuyuki after the explosion at Chaldea. Becomes the organization's Master for the Grand Orders."
+    },
+    {
+      "slug": "kirschtaria-wodime",
+      "name": "Kirschtaria Wodime",
+      "role": "A-Team Master candidate; Crypter",
+      "status": "Deceased (defected)",
+      "bio": "A former Clock Tower Astromancy Department member who was an A-Team Master candidate and later defected. He appears as the Crypter of Lostbelt No.5 and leads the forces opposing Chaldea."
+    },
+    {
+      "slug": "daybit-sem-void",
+      "name": "Daybit Sem Void",
+      "role": "A-Team Master candidate; the last Crypter",
+      "status": "Defected",
+      "bio": "A-Team Master candidate who defected from Chaldea. He appears as the last Crypter in Lostbelt No.7."
+    }
+  ]
+}

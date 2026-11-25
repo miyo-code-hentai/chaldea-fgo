@@ -1,0 +1,17 @@
+---
+import AdminApp from '@/components/AdminApp.svelte'
+import { getCurrentUser } from '@/lib/auth'
+import Layout from '@/layouts/Layout.astro'
+
+export const prerender = false
+
+// Server-side guard: the page itself is never sent to non-admins. Every /api/admin and write endpoint checks again.
+const user = await getCurrentUser(Astro.cookies)
+if (!user) return Astro.redirect('/login?next=/admin')
+if (!user.isAdmin) return Astro.redirect('/account')
+Astro.response.headers.set('Cache-Control', 'no-store')
+---
+
+<Layout title="Administration | Chaldea" description="Manage the servant database and personnel.">
+  <AdminApp client:only="svelte" />
+</Layout>

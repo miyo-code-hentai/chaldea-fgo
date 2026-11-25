@@ -1,0 +1,21 @@
+/* =====================================================================================
+   Fixes that must load last.
+
+   Bug: page-in / page-out animate transform and filter on .app-shell with fill-mode "both", so the
+   final keyframe (transform: scale(1), filter: blur(0)) stayed on the element forever. Any transform
+   or filter makes an element the containing block for position: fixed children, so every fixed
+   navbar (mobile dock, left/right sidebar, alt dock) was positioned relative to the page instead of
+   the viewport and drifted into the content.
+   Fix: animations only fill backwards (no leftover style), and the shell has no transform or filter at rest.
+   ===================================================================================== */
+
+.app-shell {
+  transform: none;
+  filter: none;
+}
+html.is-entering .app-shell {
+  animation-fill-mode: backwards;
+}
+html.is-leaving .app-shell {
+  animation-fill-mode: forwards;
+}

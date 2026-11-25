@@ -1,0 +1,2 @@
+banner.webp  (16:9, 1920x1080)  latar panel Trinity Metatronius
+map.webp     (4:3, 1600x1200)   peta Trinity Metatronius

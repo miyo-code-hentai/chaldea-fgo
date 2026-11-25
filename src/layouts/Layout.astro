@@ -1,0 +1,67 @@
+---
+import '../styles/global.css'
+import '../styles/chaldea.css'
+import '../styles/editorial.css'
+import '../styles/community.css'
+import '../styles/v3.css'
+import '../styles/navigation.css'
+import '../styles/settings.css'
+import '../styles/about-responsive.css'
+import '../styles/fixes.css'
+import '../styles/theme-skew.css'
+import '../styles/extras.css'
+import '../styles/servants.css'
+import SiteGate from '@/components/SiteGate.svelte'
+import FloatingWords from '@/components/FloatingWords.svelte'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = 'Chaldea Security Organization',
+  description = 'Observe the Human Order through the Chaldea operational archive.',
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="/favicon-256.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#150a2d" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <!-- Applies the saved/system theme before first paint to avoid a light flash -->
+    <script is:inline>
+      try {
+        var savedTheme = localStorage.getItem('chaldea-theme')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        document.documentElement.classList.toggle('dark', savedTheme ? savedTheme === 'dark' : prefersDark)
+      } catch (_) {}
+      // Navbar position from Settings, applied before first paint
+      try {
+        var navPos = localStorage.getItem('chaldea-nav-pos')
+        if (['top', 'left', 'right', 'bottom'].indexOf(navPos) !== -1) document.documentElement.dataset.navPos = navPos
+      } catch (_) {}
+      // Hide the page behind the loading screen until the visitor has pressed Space / Enter once per session.
+      try {
+        if (sessionStorage.getItem('chaldea-entered') !== 'true') document.documentElement.classList.add('gate-pending')
+      } catch (_) {}
+    </script>
+  </head>
+  <body>
+    <div id="root" tabindex="-1">
+      <slot />
+    </div>
+    <FloatingWords client:only="svelte" />
+    <SiteGate client:only="svelte" />
+  </body>
+</html>

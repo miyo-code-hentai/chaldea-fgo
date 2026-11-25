@@ -1,0 +1,22 @@
+---
+import AuthForm from '@/components/AuthForm.svelte'
+import AuthShell from '@/components/AuthShell.astro'
+import Layout from '@/layouts/Layout.astro'
+
+export const prerender = true
+---
+
+<Layout title="Personnel Sign In | Chaldea" description="Sign in to the Chaldea personnel archive.">
+  <AuthShell
+    eyebrow="AUTHORIZED PERSONNEL / SESSION GATE"
+    title="Return to the observation deck."
+    copy="Authenticate your personnel record to enter the private observation archive. Your app session remains separate from Chaldea’s CMS command access."
+  >
+    <p class="auth-eyebrow">IDENTITY VERIFICATION</p>
+    <h2 class="auth-card-title">Sign in</h2>
+    <AuthForm client:load mode="login" />
+    <p class="auth-alt">
+      New personnel? <a href="/signup">Create an account ↗</a>
+    </p>
+  </AuthShell>
+</Layout>
